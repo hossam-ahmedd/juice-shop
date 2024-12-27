@@ -1,6 +1,6 @@
 # juice-shop
 Juice-Shop web Pentesting Project
-# Introduction to Juice-Shop Web Penetration Testing Project
+# Juice-Shop Web Penetration Testing Project
 
 In today's digital landscape, web applications are increasingly becoming targets for cyber threats, making security a paramount concern for developers and organizations alike. The Juice Shop project serves as an exemplary platform for understanding and testing web application vulnerabilities in a controlled environment. Designed as an intentionally insecure web application, Juice Shop provides a rich ground for security professionals, developers, and enthusiasts to hone their penetration testing skills.
 
