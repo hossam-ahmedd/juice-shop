@@ -19,3 +19,6 @@ The primary objectives of this penetration testing project are to:
 4. **Hands-On Learning**: Offer a practical learning experience for individuals interested in cybersecurity, allowing them to apply theoretical knowledge in a real-world context.
 
 Through this project, we aim to not only identify and document vulnerabilities but also to foster a deeper understanding of web application security principles. By the end of this penetration testing engagement, participants will be better equipped to recognize and mitigate security risks in their own web applications, ultimately contributing to a safer online environment.
+# Ways of Hacking Juice-Shop
+## 1- SQL Injection
+![Screenshot01]()
