@@ -20,5 +20,49 @@ The primary objectives of this penetration testing project are to:
 
 Through this project, we aim to not only identify and document vulnerabilities but also to foster a deeper understanding of web application security principles. By the end of this penetration testing engagement, participants will be better equipped to recognize and mitigate security risks in their own web applications, ultimately contributing to a safer online environment.
 # Ways of Hacking Juice-Shop
-## 1- SQL Injection
-![Screenshot01]()
+# 1- SQL Injection
+![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/1.png?raw=true)
+![Screenshot02](https://github.com/hossam-ahmedd/juice-shop/blob/main/2.png?raw=true)
+![Screenshot03](https://github.com/hossam-ahmedd/juice-shop/blob/main/3.png?raw=true)
+We started by performing an SQL injection by injecting SQL commands into the login credentials to bypass the authentication process.
+## SQL Injection Example
+
+An example of an SQL injection payload is:
+
+```sql
+admin' or 1=1;
+```
+# 2- XSS (HTML Injection)
+![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/h4.png?raw=true)
+![Screenshot02](https://github.com/hossam-ahmedd/juice-shop/blob/main/h5.png?raw=true)
+![Screenshot03](https://github.com/hossam-ahmedd/juice-shop/blob/main/h6.png?raw=true)
+We tried to perform a cross-site attack through HTML injection by typing HTML code into the search bar, and it was executed successfully!
+
+## HTML Injection Example
+
+
+
+An example of an HTML injection payload is:
+
+```html
+<iframe src="https://alexu.mans.edu.eg/static/index.html"></iframe>
+```
+# 3- FTP Server Discovery
+![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/d7.png?raw=true)
+![Screenshot02](https://github.com/hossam-ahmedd/juice-shop/blob/main/d8.png?raw=true)
+![Screenshot03](https://github.com/hossam-ahmedd/juice-shop/blob/main/d9.png?raw=true)
+
+We found the FTP server path By dirb tool, which contains many sensitive information and data, such as company secrets and malware files. In addition, we discovered videos of promotions.
+```
+dirb http://127.0.0.1:42000/
+```
+# 4- Enumeration to Find Admin Path
+![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/f9.png?raw=true)
+![Screenshot02](https://github.com/hossam-ahmedd/juice-shop/blob/main/f10.png?raw=true)
+![Screenshot03](https://github.com/hossam-ahmedd/juice-shop/blob/main/f11.png?raw=true)
+
+In this phase, we used the FFUF tool to identify the admin path for the URL, which performed a brute-force attack and returned all possible paths. Additionally, we inspected the source code of the URL and found the administration path within it.
+## FFUF Command
+```
+fuf -w /usr/share/wordlists/dirb/common.txt -u http://127.0.0.1:42000/#/FUZZ  -c -v
+```
