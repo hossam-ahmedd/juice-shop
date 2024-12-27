@@ -19,6 +19,11 @@ The primary objectives of this penetration testing project are to:
 4. **Hands-On Learning**: Offer a practical learning experience for individuals interested in cybersecurity, allowing them to apply theoretical knowledge in a real-world context.
 
 Through this project, we aim to not only identify and document vulnerabilities but also to foster a deeper understanding of web application security principles. By the end of this penetration testing engagement, participants will be better equipped to recognize and mitigate security risks in their own web applications, ultimately contributing to a safer online environment.
+
+The Project was made by:
+1.  **Hossam Ahmed Adel (2305037).**
+2.  **Antony Medhat Makram (2305065).**
+3.  **Mosab Magdy Abdelhalem (2305069).**
 # Ways of Hacking Juice-Shop
 # 1- SQL Injection
 ![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/1.png?raw=true)
