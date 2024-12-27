@@ -64,5 +64,5 @@ dirb http://127.0.0.1:42000/
 In this phase, we used the FFUF tool to identify the admin path for the URL, which performed a brute-force attack and returned all possible paths. Additionally, we inspected the source code of the URL and found the administration path within it.
 ## FFUF Command
 ```
-fuf -w /usr/share/wordlists/dirb/common.txt -u http://127.0.0.1:42000/#/FUZZ  -c -v
+ffuf -w /usr/share/wordlists/dirb/common.txt -u http://127.0.0.1:42000/#/FUZZ  -c -v
 ```
